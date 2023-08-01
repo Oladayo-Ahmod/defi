@@ -66,6 +66,41 @@
       "artifacts": [
         "IWeth"
       ]
+    },
+    "C:\\xampp\\htdocs\\blockchain_projects\\defi\\contracts\\interfaces\\ILendingPoolAddressProvider.sol": {
+      "lastModificationDate": 1690883454731,
+      "contentHash": "349b2b29065b6e4360bfc83355d0f76c",
+      "sourceName": "contracts/interfaces/ILendingPoolAddressProvider.sol",
+      "solcConfig": {
+        "version": "0.6.12",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.6.12"
+      ],
+      "artifacts": [
+        "ILendingPoolAddressesProvider"
+      ]
     }
   }
 }

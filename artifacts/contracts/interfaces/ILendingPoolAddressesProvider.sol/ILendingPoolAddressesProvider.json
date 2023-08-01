@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
   "contractName": "ILendingPoolAddressesProvider",
-  "sourceName": "contracts/interfaces/ILendingPoolAddressProvider.sol",
+  "sourceName": "contracts/interfaces/ILendingPoolAddressesProvider.sol",
   "abi": [
     {
       "anonymous": false,

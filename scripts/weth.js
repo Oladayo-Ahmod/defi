@@ -19,10 +19,12 @@ async function lendingPool(account){
     account)
 
     const lendingPoolAddress = await contract.getLendingPool()
-    // const lending_Pool = await ethers.getContractAt('ILendingPoolAddressesProvider',lendingPoolAddress)
+    const lending_Pool = await ethers.getContractAt('ILendingPool',lendingPoolAddress,account)
+    return lending_Pool
 
 
 }
 module.exports = {
-    getWeth    
+    getWeth,
+    lendingPool
 }

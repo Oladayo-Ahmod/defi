@@ -67,41 +67,6 @@
         "IWeth"
       ]
     },
-    "C:\\xampp\\htdocs\\blockchain_projects\\defi\\contracts\\interfaces\\ILendingPoolAddressesProvider.sol": {
-      "lastModificationDate": 1690885316195,
-      "contentHash": "349b2b29065b6e4360bfc83355d0f76c",
-      "sourceName": "contracts/interfaces/ILendingPoolAddressesProvider.sol",
-      "solcConfig": {
-        "version": "0.6.12",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.6.12"
-      ],
-      "artifacts": [
-        "ILendingPoolAddressesProvider"
-      ]
-    },
     "C:\\xampp\\htdocs\\blockchain_projects\\defi\\contracts\\interfaces\\LendingPool.sol": {
       "lastModificationDate": 1690886840165,
       "contentHash": "a9594d9926380565ae0172b6f0b8058e",

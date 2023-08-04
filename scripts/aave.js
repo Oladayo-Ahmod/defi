@@ -1,10 +1,14 @@
 const { ethers } = require('hardhat')
-const {getWeth} = require('../scripts/weth')
+const {getWeth,AMOUNT} = require('../scripts/weth')
 async function main(){
     await getWeth()
     const [deployer] = await ethers.getSigners()
     const lending_Pool = await getLendingPool(deployer)
     console.log(`lending pool contract address is ${lending_Pool.address}`);
+
+    const wethTokenAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    await approveErc20(wethTokenAddress,lending_Pool.address,AMOUNT,deployer)
+    
 }
 
 async function getLendingPool(account){
@@ -19,8 +23,16 @@ async function getLendingPool(account){
 
 }
 
-async function approveErc20(){
+async function approveErc20(erc20Address,spenderAddress,amount,account){
+    const erc20 = await ethers.getContractAt(
+    'IERC20',
+    erc20Address,
+    account
+    )
     
+    const tx = await erc20.approve(spenderAddress,amount)
+    tx.wait(1)
+    console.log('approved');
 }
 main()
 .then(()=> process.exit(0))

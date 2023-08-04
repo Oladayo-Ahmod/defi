@@ -14,7 +14,15 @@ async function main(){
 
     // borrow
      await userBorrowingData(lending_Pool,deployer.address)
+     await daiEthPrice()
     // console.log(availableBorrowsETH,totalDebtETH);
+}
+
+// retrieve dai/eth price
+async function daiEthPrice(){
+    const daiEthPriceFeed = await ethers.getContractAt('AggregatorV3Interface','0x773616E4d11A78F511299002da57A0a94577F1f4')
+    const price = await daiEthPriceFeed.latestRoundData()
+    console.log(price);
 }
 
 // retrieve user borrowing data

@@ -209,6 +209,41 @@
       "artifacts": [
         "IERC20"
       ]
+    },
+    "C:\\xampp\\htdocs\\blockchain_projects\\defi\\contracts\\interfaces\\AggregatorV3Interface.sol": {
+      "lastModificationDate": 1691131937378,
+      "contentHash": "f2604c84d03a13d7e932ae1217a1cf55",
+      "sourceName": "contracts/interfaces/AggregatorV3Interface.sol",
+      "solcConfig": {
+        "version": "0.6.12",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "AggregatorV3Interface"
+      ]
     }
   }
 }

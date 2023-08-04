@@ -12,7 +12,9 @@ async function main(){
     await lending_Pool.deposit(wethTokenAddress,AMOUNT,deployer.address,0)
     console.log('--------deposited---------');
 
-    
+    // borrow
+     await userBorrowingData(lending_Pool,deployer.address)
+    // console.log(availableBorrowsETH,totalDebtETH);
 }
 
 // retrieve user borrowing data

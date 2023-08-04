@@ -8,7 +8,9 @@ async function main(){
 
     const wethTokenAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
     await approveErc20(wethTokenAddress,lending_Pool.address,AMOUNT,deployer)
-    
+    console.log('-------deposting--------');
+    await lending_Pool.deposit(wethTokenAddress,AMOUNT,deployer.address,0)
+    console.log('--------deposited---------');
 }
 
 async function getLendingPool(account){

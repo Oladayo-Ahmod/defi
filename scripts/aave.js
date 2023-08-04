@@ -11,7 +11,23 @@ async function main(){
     console.log('-------deposting--------');
     await lending_Pool.deposit(wethTokenAddress,AMOUNT,deployer.address,0)
     console.log('--------deposited---------');
+
+    
 }
+
+// retrieve user borrowing data
+async function userBorrowingData(lending_Pool,account){
+    const {
+        totalCollateralETH,
+        totalDebtETH,
+        availableBorrowsETH
+    } = await lending_Pool.getUserAccountData(account)
+    console.log(`total deposited : ${totalCollateralETH}`);
+    console.log(`total debt : ${totalDebtETH}`);
+    console.log(`available to borrow ${availableBorrowsETH}`);
+    return {totalCollateralETH,totalDebtETH,availableBorrowsETH}
+}
+
 
 async function getLendingPool(account){
     const contract = await ethers.getContractAt(
